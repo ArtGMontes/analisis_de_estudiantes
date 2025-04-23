@@ -1,33 +1,59 @@
-# 📊 Análisis de Rendimiento Estudiantil y Estilos de Aprendizaje
+# 📊 Análisis de Desempeño Estudiantil y Estilos de Aprendizaje
 
-Este proyecto realiza un análisis exploratorio de datos (EDA) sobre el rendimiento académico de estudiantes en relación con su estilo de aprendizaje preferido, hábitos de sueño, uso de redes sociales, entre otros factores.
+Este proyecto explora la relación entre diversos hábitos estudiantiles (como el estilo de aprendizaje, horas de estudio, sueño y nivel de estrés) y el rendimiento académico, utilizando un dataset basado en encuestas aplicadas a estudiantes.
 
-## 🗂️ Contenido
+---
 
-- `Student_Performance_$_Learning_Style.ipynb`: Notebook con el análisis completo en Python usando pandas, seaborn y matplotlib.
-- `student_performance_large_dataset.csv`: Dataset con registros de estudiantes, sus calificaciones, hábitos y estilo de aprendizaje.
+## 📌 Objetivos del análisis
 
-## 📌 Objetivos del Análisis
+- Limpiar y preparar los datos para su análisis
+- Explorar visualmente y estadísticamente los hábitos estudiantiles
+- Detectar patrones o correlaciones significativas con el rendimiento académico
+- Documentar el proceso de análisis y sus hallazgos de forma estructurada
 
-- Explorar la distribución de variables como edad, género, horas de sueño y redes sociales.
-- Identificar correlaciones entre hábitos y desempeño académico.
-- Comparar los resultados según el estilo de aprendizaje preferido.
+---
 
-## 📊 Herramientas utilizadas
+## 🔎 Dataset
 
-- Python
-- Pandas
-- NumPy
-- Seaborn
-- Matplotlib
+- **Nombre del archivo:** `student_performance_large_dataset.csv`
+- **Origen:** Archivo obtenido de Kaggle
+- **Observaciones:** 10,000 registros aproximadamente
+- **Variables principales:**  
+  `final_grade`, `study_hours_per_week`, `use_of_educational_tech`, `stress_level`, `preferred_learning_style`, `sleep_hours_per_night`
 
-## 🧠 Hallazgos preliminares
+---
 
-- Algunos estilos de aprendizaje muestran promedios de calificación ligeramente superiores.
-- La cantidad de sueño y el tiempo en redes sociales parecen tener una correlación leve con el rendimiento.
+## 🧹 Fase 1 – Limpieza de Datos
 
-> *Este proyecto está en desarrollo. Se añadirán visualizaciones, limpieza de datos y una narrativa analítica más completa.*
+Se realizó:
 
-## 🚀 Cómo contribuir
+- Revisión de tipos de datos
+- Conversión de caracteres donde fue necesario
+- Verificación de valores nulos y duplicados (no se encontraron)
 
-Si quieres comentar o sugerir mejoras, ¡haz un fork o abre un issue!
+---
+
+## 📊 Fase 2 – Análisis Exploratorio (EDA)
+
+Se utilizaron histogramas, boxplots y un mapa de calor de correlaciones para explorar visualmente la relación entre hábitos y desempeño académico. Se evaluaron las siguientes preguntas:
+
+- ¿Tienen las horas de estudio o sueño una correlación clara con las calificaciones?
+- ¿Influye el estilo de aprendizaje reportado en el rendimiento?
+- ¿El estrés parece ser un factor diferencial entre estudiantes?
+
+---
+
+## 💡 Conclusiones y Observaciones
+
+- **No se encontraron correlaciones fuertes** entre las variables cuantitativas analizadas y las calificaciones.
+- La variable `preferred_learning_style` no mostró patrones claros de diferenciación de rendimiento académico.
+- Es posible que las observaciones hayan sido generadas de manera aleatorias
+- Este análisis funciona como un excelente **caso práctico** para aplicar limpieza de datos y EDA, pero **no como base suficiente para predicciones confiables**.
+
+---
+
+## 🚀 Próximos pasos
+
+- Buscar o generar un dataset más robusto para repetir el análisis
+- Ampliar el enfoque con modelos predictivos (si la calidad de datos lo permite)
+- Desarrollar una visualización final con dashboard (Power BI o Streamlit)
